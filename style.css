@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+/* 初期設定 */
+html{
+  font-size: 100%;
+}
+
+body{
+  font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+body{
+  background-color: #f4f9ff;
+  font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;
+  color:#333333;
+}
+
+.h2-setting{
+  font-size: 1.125rem;
+}
+
+/* ヘッダー */
+.header{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo{
+  max-width: 160px;
+  width: 100%;
+  margin: 3.75rem 0 1rem 0.625rem;
+}
+.logo img{
+  width: 100%;
+  height: auto;
+}
+
+/* ヒーロー画像 */
+.hero{
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 0.625rem 3.75rem;
+  margin: 0 auto;
+}
+
+.hero img{
+  width: 100%;
+  height: auto;
+}
+
+/* index */
+.index{
+  background-color: #ffffff;
+  padding: 1.875rem 2.5rem;
+  max-width:1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.index>h2{
+  padding-bottom:0.625rem;
+  padding-left: 0.75rem;
+}
+
+.list{
+  counter-reset: num;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.list li{
+  counter-increment: num;
+  font-size: 0.875rem;
+  padding-left: 1.5em;
+  text-indent: -0.75em;
+}
+
+.list li:not(:last-child){
+  margin-bottom: 1.25rem;
+}
+
+.list li::before{
+  content: counter(num)".";
+}
+
+/* ディティール */
+.detail{
+  padding-top: 3.75rem;
+}
+
+.detail>h2{
+  max-width: 295px;
+  width: 100%;
+  padding-bottom: 0.625rem;
+  margin: 0 auto;
+}
+
+.detail-img{
+  max-width: 295px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.detail-img img{
+  width: 100%;
+  height: auto;
+}
+
+.detail-text>h2{
+  max-width: 295px;
+  width: 100%;
+  padding-top: 1.5rem;
+  margin: 0 auto;
+}
+
+table{
+  margin:1.25rem auto;
+  font-size: 14px;
+  border-top: 1px solid#999999;
+  border-bottom: 1px solid#999999;
+  max-width: 295px;
+  width: 100%;
+}
+
+.td-width{
+  width: 70px;
+}
+
+tr:first-child td{
+  padding-top: 1rem;
+}
+
+tr:last-child td{
+  padding-bottom: 1rem;
+}
+
+.detail-text>p{
+  max-width: 295px;
+  width: 100%;
+  font-size: 0.875rem;
+  margin: 0 auto;
+}
+
+.detail-text>a{
+  display: block;
+  text-decoration: underline;
+  font-size: 0.875rem;
+  max-width: 295px;
+  width: 100%;
+  margin: 1.25rem auto 7rem auto;
+}
+
+.footer{
+  max-width: 295px;
+  width: 100%;
+  margin: 0 auto 1rem ;
+  font-size: 0.625rem;
+
+}
+
+
+@media(min-width:1024px){
+
+  /* hero */
+  .hero{
+    padding: 0 0 3.75rem;
+  }
+
+  /* リスト */
+
+.index > h2{
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto 0.625rem;
+  padding-left: 0;
+}
+
+
+.list{
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+  .list li{
+  padding-left: 0em;
+  text-indent: 0em;
+}
+/* ディティール */
+
+.detail>h2{
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.detail-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3.75rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+.detail-img,
+.detail-text{
+  width: 295px;
+}
+
+.detail-text>h2{
+  padding-top: 0;
+}
+
+.detail-img{
+  max-width: 270px;
+}
+
+/* フッター */
+.footer{
+  max-width: 600px;
+
+}
+}
